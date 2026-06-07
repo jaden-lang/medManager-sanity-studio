@@ -20,6 +20,21 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'icon',
+      title: '卡片圖示',
+      type: 'string',
+      description: '首頁服務卡片使用的圖示；未選擇時使用預設盾牌圖',
+      options: {
+        list: [
+          {title: '日曆（預約）', value: 'calendar'},
+          {title: '文件（報告）', value: 'document'},
+          {title: '家庭', value: 'family'},
+          {title: '盾牌（預設）', value: 'shield'},
+        ],
+        layout: 'radio',
+      },
+    }),
+    defineField({
       name: 'image',
       title: '服務圖片',
       type: 'image',

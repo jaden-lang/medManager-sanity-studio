@@ -44,6 +44,18 @@ export default defineType({
       of: [{type: 'localeString'}],
     }),
     defineField({
+      name: 'ctaText',
+      title: '按鈕文字',
+      type: 'localeString',
+      description: '價格卡底部按鈕文字，例如「立即註冊」',
+    }),
+    defineField({
+      name: 'ctaUrl',
+      title: '按鈕連結',
+      type: 'string',
+      description: '例如：/register 或完整網址',
+    }),
+    defineField({
       name: 'isFeatured',
       title: '主打方案',
       description: '開啟後會以醒目樣式呈現',
